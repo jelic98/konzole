@@ -22,13 +22,13 @@ allprojects {
 
 ```gradle
 dependencies {
-    compile 'com.github.jelic98:konzole:1.0.0'
+    compile 'com.github.jelic98:konzole:1.0.1'
 }
 ```
 
 ## Usage
 
-For more details, take a look at this awesome [demo](https://github.com/jelic98/konzole/blob/master/demo/src/main/java/com/konzole/demo/Main.java).  
+For more details, take a look at this awesome [demo](https://github.com/jelic98/konzole/blob/develop/demo/src/main/java/com/konzole/demo/Main.java).  
 
 ```java
 new Lifecycle(new Structure() {
@@ -55,5 +55,4 @@ new Lifecycle(new Structure() {
 
 * Add license
 * Add documentation
-* Add demo project
 * Add demo gif

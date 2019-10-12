@@ -3,7 +3,7 @@ plugins {
 }
 
 group 'com.konzole.demo'
-version '1.0.0'
+version '1.0.1'
 
 sourceCompatibility = 1.8
 
@@ -19,5 +19,5 @@ repositories {
 }
 
 dependencies {
-    compile 'com.github.jelic98:konzole:1.0.0'
+    compile 'com.github.jelic98:konzole:1.0.1'
 }
