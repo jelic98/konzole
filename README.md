@@ -5,6 +5,8 @@
 
 Framework for building Java console applications in a declarative manner.  
 
+[![asciicast](https://asciinema.org/a/UN47SjA7deOP2iMy4sXX0Inmh.svg)](https://asciinema.org/a/UN47SjA7deOP2iMy4sXX0Inmh)
+
 ## Installing
 
 1. Add repository in root ```build.gradle```
@@ -53,6 +55,4 @@ new Lifecycle(new Structure() {
 
 ## TODO
 
-* Add license
 * Add documentation
-* Add demo gif
