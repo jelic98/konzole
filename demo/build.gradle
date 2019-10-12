@@ -1,23 +1,26 @@
-plugins {
-    id 'java'
-}
+apply plugin: 'java'
+apply plugin: 'application'
 
 group 'com.konzole.demo'
 version '1.0.1'
 
 sourceCompatibility = 1.8
 
+mainClassName = 'com.konzole.demo.Main'
+
 jar {
     manifest {
         attributes('Implementation-Title': project.name,
-                'Implementation-Version': project.version)
+                'Implementation-Version': project.version,
+                'Main-Class': 'com.konzole.demo.Main')
     }
 }
 
 repositories {
     mavenCentral()
+    maven { url 'https://jitpack.io' }
 }
 
 dependencies {
-    compile 'com.github.jelic98:konzole:1.0.1'
+    implementation 'com.github.jelic98:konzole:v1.0.1'
 }

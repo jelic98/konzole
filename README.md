@@ -22,7 +22,7 @@ allprojects {
 
 ```gradle
 dependencies {
-    compile 'com.github.jelic98:konzole:1.0.1'
+	implementation 'com.github.jelic98:konzole:v1.0.1'
 }
 ```
 
@@ -53,6 +53,5 @@ new Lifecycle(new Structure() {
 
 ## TODO
 
-* Add license
 * Add documentation
 * Add demo gif

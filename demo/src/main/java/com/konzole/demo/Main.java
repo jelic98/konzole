@@ -1,5 +1,7 @@
 package com.konzole.demo;
 
+import com.konzole.framework.*;
+
 public class Main {
 
     public static void main(String[] args) {
