@@ -50,8 +50,3 @@ new Lifecycle(new Structure() {
     }
 }).run();
 ```
-
-## TODO
-
-* Add documentation
-* Add demo gif
