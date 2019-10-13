@@ -3,6 +3,10 @@ package com.konzole.framework;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * Holds behaviour logic based on {@code Structure} instance provided to it.
+ *      Looping until the user decides to exit the application.
+ */
 public class Lifecycle {
 
     private static final String OPTION_SEPARATOR = " - ";
@@ -15,12 +19,19 @@ public class Lifecycle {
     private Structure structure;
     private Scanner scanner;
 
+    /**
+     * One and only constructor.
+     * @param structure Main application structure which has nested questions, options and inputs.
+     */
     public Lifecycle(Structure structure) {
         this.structure = structure;
 
         scanner = new Scanner(System.in);
     }
 
+    /**
+     * Displays main question from provided {@code Structure} instance.
+     */
     public void run() {
         ask(structure.getQuestion());
     }

@@ -52,7 +52,3 @@ new Lifecycle(new Structure() {
     }
 }).run();
 ```
-
-## TODO
-
-* Add documentation
