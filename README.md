@@ -28,7 +28,7 @@ dependencies {
 
 ## Usage
 
-For more details, take a look at this awesome [demo](https://github.com/jelic98/konzole/blob/develop/demo/src/main/java/com/konzole/demo/Main.java).  
+For more details, take a look at this awesome [demo](https://github.com/jelic98/konzole/blob/develop/demo/src/main/java/com/konzole/demo/Main.java) or read the official [documentation](https://jelic98.github.io/konzole).  
 
 ```java
 new Lifecycle(new Structure() {
