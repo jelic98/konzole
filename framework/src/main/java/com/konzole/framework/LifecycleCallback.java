@@ -1,6 +1,6 @@
 package com.konzole.framework;
 
-interface LifecycleCallback {
+public interface LifecycleCallback {
 
     void onStart();
     void onBack();
