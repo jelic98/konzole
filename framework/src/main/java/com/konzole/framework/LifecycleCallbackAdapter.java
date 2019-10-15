@@ -1,16 +1,19 @@
 package com.konzole.framework;
 
-public abstract class LifecycleCallbackAdapter {
+public abstract class LifecycleCallbackAdapter implements LifecycleCallback {
 
-    void onStart() {
-
-    }
-
-    void onBack() {
+    @Override
+    public void onStart() {
 
     }
 
-    void onExit() {
+    @Override
+    public void onBack() {
+
+    }
+
+    @Override
+    public void onExit() {
 
     }
 }
