@@ -63,7 +63,7 @@ public class Option implements SelectionCallback {
      * @return Current {@code Option} instance.
      */
     public Option addInput(Input input) {
-        inputs.put(input.getTitle().toLowerCase(), input);
+        inputs.put(input.getKey().toLowerCase(), input);
 
         return this;
     }
