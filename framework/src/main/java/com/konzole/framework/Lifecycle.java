@@ -7,7 +7,7 @@ import java.util.Scanner;
  * Holds behaviour logic based on {@code Structure} instance provided to it.
  *      Looping until the user decides to exit the application.
  */
-public class Lifecycle {
+public class Lifecycle implements LifecycleCallback {
 
     private static final String OPTION_SEPARATOR = " - ";
     private static final String INPUT_SEPARATOR = ": ";
@@ -18,9 +18,10 @@ public class Lifecycle {
 
     private Structure structure;
     private Scanner scanner;
+    private LifecycleCallback callback;
 
     /**
-     * One and only constructor.
+     * Basic constructor that accepts just a question structure.
      * @param structure Main application structure which has nested questions, options and inputs.
      */
     public Lifecycle(Structure structure) {
@@ -30,9 +31,23 @@ public class Lifecycle {
     }
 
     /**
+     * Another constructor that accepts a question structure and {@code LifecycleCallback} instance.
+     * @param structure Main application structure which has nested questions, options and inputs.
+     * @param callback Callback that is called on lifecycle events.
+     */
+    public Lifecycle(Structure structure, LifecycleCallback callback) {
+        this.structure = structure;
+        this.callback = callback;
+
+        scanner = new Scanner(System.in);
+    }
+
+    /**
      * Displays main question from provided {@code Structure} instance.
      */
     public void run() {
+        onStart();
+
         ask(structure.getQuestion());
     }
 
@@ -45,6 +60,8 @@ public class Lifecycle {
         options.add(new ExecuteOption(BACK_OPTION) {
             @Override
             public void execute() {
+                onBack();
+
                 if(question.hasParent()) {
                     ask(question.getParent());
                 }
@@ -53,6 +70,8 @@ public class Lifecycle {
         options.add(new ExecuteOption(EXIT_OPTION) {
             @Override
             public void execute() {
+                onExit();
+
                 System.exit(0);
             }
         });
@@ -88,6 +107,27 @@ public class Lifecycle {
             ask(selection.getQuestion());
         }else {
             ask(structure.getQuestion());
+        }
+    }
+
+    @Override
+    public void onStart() {
+        if(callback != null) {
+            callback.onStart();
+        }
+    }
+
+    @Override
+    public void onBack() {
+        if(callback != null) {
+            callback.onBack();
+        }
+    }
+
+    @Override
+    public void onExit() {
+        if(callback != null) {
+            callback.onExit();
         }
     }
 }

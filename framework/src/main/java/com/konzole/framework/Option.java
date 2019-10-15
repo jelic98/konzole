@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * Holds option title, nested question and required inputs.
  */
-public class Option implements SelectionListener {
+public class Option implements SelectionCallback {
 
     private String title;
     private Question question;

@@ -1,6 +1,6 @@
 package com.konzole.framework;
 
-interface SelectionListener {
+interface SelectionCallback {
 
     void onSelected();
 }
