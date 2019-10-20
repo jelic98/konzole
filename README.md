@@ -5,7 +5,7 @@
 
 Framework for building Java console applications in a declarative manner.  
 
-[![asciicast](https://asciinema.org/a/UN47SjA7deOP2iMy4sXX0Inmh.svg)](https://asciinema.org/a/UN47SjA7deOP2iMy4sXX0Inmh)
+<!--[![asciicast](https://asciinema.org/a/UN47SjA7deOP2iMy4sXX0Inmh.svg)](https://asciinema.org/a/UN47SjA7deOP2iMy4sXX0Inmh)-->
 
 ## Installing
 
