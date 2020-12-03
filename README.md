@@ -38,7 +38,7 @@ new Lifecycle(new Structure() {
     protected Question create() {
         return new Question("What operation to execute?")
             .addOption(new Option("File upload")
-                .setQuestion(new Question("What is a file located?")
+                .setQuestion(new Question("Where is the file located?")
                     .addOption(new ExecuteOption("Local storage") {
                         @Override
                         public void execute() {
